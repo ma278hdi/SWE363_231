@@ -1,12 +1,22 @@
+
 table , th , td{
-    border: 2px solid white;
+    border: 2px solid #BD7938;
+
 } 
 
 body{
-    background-color: black;
-    color: white;
+    background-color: #532700;
+    color: #BD7938;
+    font-family:  sans-serif;
 }
 
 a{
-    color: green;
-}
+    color: #BD7938;
+} 
+ img{
+    height: 400px;
+    width: 400px;
+ } 
+ th , h1{
+    text-transform: uppercase;
+ }
