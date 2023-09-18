@@ -7,7 +7,6 @@ table , th , td{
 body{
     background-color: #532700;
     color: #BD7938;
-    font-family:  sans-serif;
 }
 
 a{
@@ -17,6 +16,13 @@ a{
     height: 400px;
     width: 400px;
  } 
- th , h1{
+ th ,h1 {
     text-transform: uppercase;
+ }
+
+ .top{
+    background-color: #8D4421;
+ } 
+ em{
+    background-color: #8D4421;
  }
