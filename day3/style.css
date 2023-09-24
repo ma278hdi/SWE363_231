@@ -18,6 +18,8 @@ a{
  } 
  th ,h1 {
     text-transform: uppercase;
+    font-family: High Tower Text;
+
  }
 
  .top{
@@ -25,4 +27,8 @@ a{
  } 
  em{
     background-color: #8D4421;
+ }
+
+ p{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  }
