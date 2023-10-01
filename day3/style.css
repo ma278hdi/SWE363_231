@@ -60,3 +60,8 @@ animation-duration: 3s;
       transform: rotate(270deg);
    }
  }
+#Photo3{
+  float: left;
+  height: 100px;
+  width: 500px;
+}
