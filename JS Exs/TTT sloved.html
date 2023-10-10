@@ -126,7 +126,7 @@
 
          if(ev.key==="ArrowUp"){
             if(index<2){
-                index = 1
+                index = 0
                 var havercolor = document.getElementById(IDs)
                 havercolor.style.backgroundColor = "blanchedalmond"
                 if(gameModel[index]=== ""){
@@ -142,13 +142,118 @@
                 }
                 console.log(letterObjectKeyBoard)
             }else{
-                index = index -3
+                index = index - 3
+                var havercolor = document.getElementById(IDs)
+                havercolor.style.backgroundColor = "blanchedalmond"
+                if(gameModel[index]=== ""){
+                    if(turn === "X"){
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "red"
+                        document.getElementById(IDs).innerHTML = turn
+                    }else{
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "green"
+                        document.getElementById(IDs).innerHTML = turn
+                    }
+                }
             }
             turn = turn === "X" ? "O" : "X"
 
          }else if (ev.key === "ArrowDown"){
-            if(index >= 7){
-                index = 7
+            if(index >= 6){
+                index = 6
+                var havercolor = document.getElementById(IDs)
+                havercolor.style.backgroundColor = "blanchedalmond"
+                if(gameModel[index]=== ""){
+                    if(turn === "X"){
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "red"
+                        document.getElementById(IDs).innerHTML = turn
+                    }else{
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "green"
+                        document.getElementById(IDs).innerHTML = turn
+                    }
+                }
+            }else{
+                index = index +3 
+                var havercolor = document.getElementById(IDs)
+                havercolor.style.backgroundColor = "blanchedalmond"
+                if(gameModel[index]=== ""){
+                    if(turn === "X"){
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "red"
+                        document.getElementById(IDs).innerHTML = turn
+                    }else{
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "green"
+                        document.getElementById(IDs).innerHTML = turn
+                    }
+                }
+            }
+         }else if (ev.key ==="ArrowRight"){
+            if(index>=8){
+                index = 8;
+                var havercolor = document.getElementById(IDs)
+                havercolor.style.backgroundColor = "blanchedalmond"
+                if(gameModel[index]=== ""){
+                    if(turn === "X"){
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "red"
+                        document.getElementById(IDs).innerHTML = turn
+                    }else{
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "green"
+                        document.getElementById(IDs).innerHTML = turn
+                    }
+                }
+            }else{
+                index = index +1
+                var havercolor = document.getElementById(IDs)
+                havercolor.style.backgroundColor = "blanchedalmond"
+                if(gameModel[index]=== ""){
+                    if(turn === "X"){
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "red"
+                        document.getElementById(IDs).innerHTML = turn
+                    }else{
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "green"
+                        document.getElementById(IDs).innerHTML = turn
+                    }
+                }
+            }
+         }else if(ev.key ==="ArrowLeft"){
+            if(index<0){ 
+                index = 0
+                var havercolor = document.getElementById(IDs)
+                havercolor.style.backgroundColor = "blanchedalmond"
+                if(gameModel[index]=== ""){
+                    if(turn === "X"){
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "red"
+                        document.getElementById(IDs).innerHTML = turn
+                    }else{
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "green"
+                        document.getElementById(IDs).innerHTML = turn
+                    }
+                }
+            }else{
+                index = index-1
+                var havercolor = document.getElementById(IDs)
+                havercolor.style.backgroundColor = "blanchedalmond"
+                if(gameModel[index]=== ""){
+                    if(turn === "X"){
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "red"
+                        document.getElementById(IDs).innerHTML = turn
+                    }else{
+                        var color = document.getElementById(IDs)
+                        color.style.backgroundColor = "green"
+                        document.getElementById(IDs).innerHTML = turn
+                    }
+                }
             }
          }
         })         
