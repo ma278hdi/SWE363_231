@@ -65,3 +65,8 @@ animation-duration: 3s;
   height: 100px;
   width: 500px;
 }
+canvas{
+  background-color: red;
+  height: 200px;
+  height: 250px;
+}

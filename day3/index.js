@@ -1,3 +1,5 @@
 fetch("https://jsonplaceholder.typicode.com/users")
     .then((res)=> res.json())
     .then((data)=> console.log(data[1]))
+var canvas = document.querySelector('canvas')
+var c = canvas.getContext('2D')
