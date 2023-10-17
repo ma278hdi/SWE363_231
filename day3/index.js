@@ -26,10 +26,12 @@ function drawLine(){
 
      if(pressed){
         c.beginPath()
-        c.arc(cordnateX,cordnateY, 30 , 0 , 2*Math.PI ,false)
+        c.arc(cordnateX,cordnateY, 5 , 0 , 2*Math.PI ,false)
         c.fill()
      }
      requestAnimationFrame(drawLine);
+     c.closePath()
+     c.stroke()
 
 }
 drawLine()
