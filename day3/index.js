@@ -1,45 +1,45 @@
-var canvas = document.querySelector('canvas')
-var width = 200
-var hight = 200
-var c = canvas.getContext('2d')
+// var canvas = document.querySelector('canvas')
+// var width = 200
+// var hight = 200
+// var c = canvas.getContext('2d')
 
 
-c.fillStyle = 'blue'
-c.fillRect(0,0,width,hight)
+// c.fillStyle = 'blue'
+// c.fillRect(0,0,width,hight)
 
-var cordnateX;
-var cordnateY;
-var pressed = false
-const mousemoveEvent = function(e){
-    cordnateX = e.clientX
-    cordnateY = e.clientY
+// var cordnateX;
+// var cordnateY;
+// var pressed = false
+// const mousemoveEvent = function(e){
+//     cordnateX = e.clientX
+//     cordnateY = e.clientY
 
-}
-document.addEventListener('mousemove',mousemoveEvent)
-
-
-canvas.addEventListener('mousedown',(async ()=>{
-    pressed = true
-})())
-canvas.addEventListener('mouseup',(function(){
-    pressed = false
-})())
+// }
+// document.addEventListener('mousemove',mousemoveEvent)
 
 
-function drawLine(){
-    c.fillStyle = 'green'
+// canvas.addEventListener('mousedown',(async ()=>{
+//     pressed = true
+// })())
+// canvas.addEventListener('mouseup',(function(){
+//     pressed = false
+// })())
 
-     if(pressed){
-        c.beginPath()
-        c.arc(cordnateX,cordnateY, 5 , 0 , 2*Math.PI ,false)
-        c.fill()
-     }
-     requestAnimationFrame(drawLine);
-     c.closePath()
-     c.stroke()
 
-}
-drawLine() 
+// function drawLine(){
+//     c.fillStyle = 'green'
+
+//      if(pressed){
+//         c.beginPath()
+//         c.arc(cordnateX,cordnateY, 5 , 0 , 2*Math.PI ,false)
+//         c.fill()
+//      }
+//      requestAnimationFrame(drawLine);
+//      c.closePath()
+//      c.stroke()
+
+// }
+// drawLine() 
 
 class Coffee{
     constructor(name,type){
@@ -50,7 +50,23 @@ class Coffee{
 var coffeeObject = []
 var coffee1 = new Coffee("L.TONE","Bujuku")
 var coffee2 = new Coffee("roasting house","Colombia")
-console.log(typeof(coffee1))
-coffeeObject[0] = coffee1
-coffeeObject[1] = coffee2
-console.log(coffeeObject[1].name)
+var coffee3 = new Coffee("Black Hourse","Colombia")
+coffeeObject.push(coffee1.name)
+coffeeObject.push(coffee2.name)
+coffeeObject.push(coffee3.name)
+
+/// using map fucntion to indicate that each coffee has 250 g
+var newCoffeeObject = coffeeObject.map(function(el){
+    return el + "weight is 250 g"
+})
+console.log(newCoffeeObject)
+// filter array
+var locationCoffee = []
+locationCoffee.push(coffee1.type)
+locationCoffee.push(coffee2.type)
+locationCoffee.push(coffee3.type)
+var newLocatedArray = locationCoffee.filter(function(el){
+    return el === "Colombia"
+})
+console.log(newLocatedArray)
+// 
