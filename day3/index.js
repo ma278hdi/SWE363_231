@@ -1,6 +1,6 @@
 var canvas = document.querySelector('canvas')
-var width = 200
-var hight = 200
+var width=canvas.width = 200
+var hight =canvas.hight = 200
 var c = canvas.getContext('2d')
 
 
@@ -31,7 +31,7 @@ function drawLine(){
 
      if(pressed){
         c.beginPath()
-        c.arc(cordnateX,cordnateY, 5 , 0 , 2*Math.PI ,false)
+        c.arc(cordnateX -canvas.getBoundingClientRect.left ,cordnateY -canvas.getBoundingClientRect.top, 5 , 0 , 2*Math.PI ,false)
         c.fill()
      }
      requestAnimationFrame(drawLine);
