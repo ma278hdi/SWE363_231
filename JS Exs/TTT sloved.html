@@ -86,7 +86,7 @@
             // get the cell 
             const cell = event.target
             var cellClickedItem = event.target.id
-             postion = parseInt(cellClickedItem[1])
+            postion = parseInt(cellClickedItem[1])
              
             // add a letter
             if(gameModel[postion] === ""){
@@ -94,7 +94,6 @@
 
             const letterObject = document.createTextNode(turn)
             cell.appendChild(letterObject)
-            console.log(letterObject)
             if(turn === "X"){
                 var color = document.getElementById(cellClickedItem)
                 color.style.backgroundColor = "red"
@@ -107,17 +106,48 @@
             document.querySelector("#turn span").innerHTML = turn
             
             }
-            var count =0;
-           
-            if(((gameModel[0]===gameModel[1]) && (gameModel[1]===gameModel[2]&&(gameModel[0]!=="")))||((gameModel[3]===gameModel[4])&&(gameModel[4]===gameModel[5]&&(gameModel[0]!=="")))||((gameModel[6]===gameModel[7])&&(gameModel[7]===gameModel[8])&&(gameModel[0]!==""))){
-                document.querySelector("#turn span").innerHTML = "you win"
+            var count = 0;
+            var letter = "a"
+            var Snum = ""
+            if((gameModel[0]===gameModel[1])&&(gameModel[1]===gameModel[2])){
+                if(gameModel[0]==="X"|| gameModel[0]==="O"){
+                    
+                    document.querySelector("h1").innerHTML = `${turn} is won`
+                    
+                }
+            } else if((gameModel[3]===gameModel[4])&&(gameModel[4]===gameModel[5])){
+                if(gameModel[3]==="X"|| gameModel[3]==="O"){
+                    
+                    document.querySelector("h1").innerHTML = `${turn} is won`
+                    
+                }
 
+            }else if((gameModel[6]===gameModel[7])&&(gameModel[7]===gameModel[8])){
+                if(gameModel[6]==="X"|| gameModel[6]==="O"){
+                    
+                    document.querySelector("h1").innerHTML = `${turn} is won`
+                    
+                }
+            }
+            else if((gameModel[0]===gameModel[4])&&(gameModel[4]===gameModel[8])){
+                if(gameModel[0]==="X"|| gameModel[0]==="O"){
+                    
+                    document.querySelector("h1").innerHTML = `${turn} is won`
+                    
+                }
+            }
+            else if((gameModel[2]===gameModel[4])&&(gameModel[4]===gameModel[6])){
+                if(gameModel[2]==="X"|| gameModel[2]){
+                    
+                    document.querySelector("h1").innerHTML = `${turn} is won`
+                    
+                }
             }
             //switch turns
 
             //chenge title
 
-        }
+        }/*
         var index = 0;
         document.body.addEventListener("keydown",(ev)=>{
             body = ev.target
@@ -305,7 +335,7 @@
                 }
             }
          }
-        })         
+        }) */        
         
         // switch the letter 
 
